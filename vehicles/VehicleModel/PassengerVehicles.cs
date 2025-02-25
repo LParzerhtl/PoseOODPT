@@ -1,6 +1,6 @@
 ﻿namespace VehicleModel;
 
-public class PassengerVehicles
+public class PassengerVehicles : MotorizedVehicle
 {
     public string Make { get; set; }
     public string Model { get; set; }
