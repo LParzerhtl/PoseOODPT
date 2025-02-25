@@ -1,0 +1,15 @@
+C:\Users\loren\RiderProjects\PoseOODPT\vehicles\VehicleDriving\bin\Debug\net8.0\VehicleDriving.exe
+C:\Users\loren\RiderProjects\PoseOODPT\vehicles\VehicleDriving\bin\Debug\net8.0\VehicleDriving.deps.json
+C:\Users\loren\RiderProjects\PoseOODPT\vehicles\VehicleDriving\bin\Debug\net8.0\VehicleDriving.runtimeconfig.json
+C:\Users\loren\RiderProjects\PoseOODPT\vehicles\VehicleDriving\bin\Debug\net8.0\VehicleDriving.dll
+C:\Users\loren\RiderProjects\PoseOODPT\vehicles\VehicleDriving\bin\Debug\net8.0\VehicleDriving.pdb
+C:\Users\loren\RiderProjects\PoseOODPT\vehicles\VehicleDriving\obj\Debug\net8.0\VehicleDriving.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\loren\RiderProjects\PoseOODPT\vehicles\VehicleDriving\obj\Debug\net8.0\VehicleDriving.AssemblyInfoInputs.cache
+C:\Users\loren\RiderProjects\PoseOODPT\vehicles\VehicleDriving\obj\Debug\net8.0\VehicleDriving.AssemblyInfo.cs
+C:\Users\loren\RiderProjects\PoseOODPT\vehicles\VehicleDriving\obj\Debug\net8.0\VehicleDriving.csproj.CoreCompileInputs.cache
+C:\Users\loren\RiderProjects\PoseOODPT\vehicles\VehicleDriving\obj\Debug\net8.0\VehicleDriving.sourcelink.json
+C:\Users\loren\RiderProjects\PoseOODPT\vehicles\VehicleDriving\obj\Debug\net8.0\VehicleDriving.dll
+C:\Users\loren\RiderProjects\PoseOODPT\vehicles\VehicleDriving\obj\Debug\net8.0\refint\VehicleDriving.dll
+C:\Users\loren\RiderProjects\PoseOODPT\vehicles\VehicleDriving\obj\Debug\net8.0\VehicleDriving.pdb
+C:\Users\loren\RiderProjects\PoseOODPT\vehicles\VehicleDriving\obj\Debug\net8.0\VehicleDriving.genruntimeconfig.cache
+C:\Users\loren\RiderProjects\PoseOODPT\vehicles\VehicleDriving\obj\Debug\net8.0\ref\VehicleDriving.dll
