@@ -1,28 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\loren\\RiderProjects\\PoseOODPT\\vehicles\\VehicleModelsTests\\VehicleModelsTests.csproj": {}
+    "C:\\Users\\Lenovo\\Documents\\GitHub\\PoseOODPT\\vehicles\\VehicleModelsTests\\VehicleModelsTests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\loren\\RiderProjects\\PoseOODPT\\vehicles\\VehicleModelsTests\\VehicleModelsTests.csproj": {
+    "C:\\Users\\Lenovo\\Documents\\GitHub\\PoseOODPT\\vehicles\\VehicleModelsTests\\VehicleModelsTests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\loren\\RiderProjects\\PoseOODPT\\vehicles\\VehicleModelsTests\\VehicleModelsTests.csproj",
+        "projectUniqueName": "C:\\Users\\Lenovo\\Documents\\GitHub\\PoseOODPT\\vehicles\\VehicleModelsTests\\VehicleModelsTests.csproj",
         "projectName": "VehicleModelsTests",
-        "projectPath": "C:\\Users\\loren\\RiderProjects\\PoseOODPT\\vehicles\\VehicleModelsTests\\VehicleModelsTests.csproj",
-        "packagesPath": "C:\\Users\\loren\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\loren\\RiderProjects\\PoseOODPT\\vehicles\\VehicleModelsTests\\obj\\",
+        "projectPath": "C:\\Users\\Lenovo\\Documents\\GitHub\\PoseOODPT\\vehicles\\VehicleModelsTests\\VehicleModelsTests.csproj",
+        "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Lenovo\\Documents\\GitHub\\PoseOODPT\\vehicles\\VehicleModelsTests\\obj\\",
         "projectStyle": "PackageReference",
         "UsingMicrosoftNETSdk": false,
         "configFilePaths": [
-          "C:\\Users\\loren\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -43,7 +41,7 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "all"
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -82,26 +80,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[8.0.11, 8.0.11]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[8.0.11, 8.0.11]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[8.0.11, 8.0.11]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Users\\loren\\.dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.404/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
