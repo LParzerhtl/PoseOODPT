@@ -16,7 +16,7 @@ public class GasstationTests
         double electricityPrice = 0.4;
 
         // Act
-        var gasstation = new Gasstation(availableSources, gasolinePrice, dieselPrice, electricityPrice);
+        var gasstation = new Gasstation(availableSources, gasolinePrice, dieselPrice, electricityPrice, new List<MotorizedVehicle>(), 5);
 
         // Assert
         Assert.Equal(availableSources, gasstation.AvailableEnergySources);
@@ -29,7 +29,7 @@ public class GasstationTests
     public void Refuel_ShouldIncreaseFuelAndReturnCost()
     {
         // Arrange
-        var gasstation = new Gasstation(new List<EnergySource> { EnergySource.Gasoline }, 1.5, 1.3, 0.4);
+        var gasstation = new Gasstation(new List<EnergySource> { EnergySource.Gasoline }, 1.5, 1.3, 0.4, new List<MotorizedVehicle>(), 5);
         var vehicle = new PassengerVehicles("BMW", "X5", 20.0, 100.0, EnergySource.Gasoline, 120.0, 8.0);
 
         double expectedCost = (100.0 - 20.0) * 1.5; // 80L * 1.5€
@@ -46,7 +46,7 @@ public class GasstationTests
     public void Refuel_ShouldNotRefuelIfEnergySourceNotAvailable()
     {
         // Arrange
-        var gasstation = new Gasstation(new List<EnergySource> { EnergySource.Diesel }, 1.5, 1.3, 0.4);
+        var gasstation = new Gasstation(new List<EnergySource> { EnergySource.Diesel }, 1.5, 1.3, 0.4, new List<MotorizedVehicle>(), 5);
         var vehicle = new PassengerVehicles("BMW", "X5", 20.0, 100.0, EnergySource.Gasoline, 120.0, 8.0);
 
         // Act
@@ -61,7 +61,7 @@ public class GasstationTests
     public void AddNewEnergySource_ShouldAddSourceIfNotExists()
     {
         // Arrange
-        var gasstation = new Gasstation(new List<EnergySource> { EnergySource.Gasoline }, 1.5, 1.3, 0.4);
+        var gasstation = new Gasstation(new List<EnergySource> { EnergySource.Gasoline }, 1.5, 1.3, 0.4, new List<MotorizedVehicle>(), 5);
 
         // Act
         bool added = gasstation.AddNewEnergySource(EnergySource.Diesel);
@@ -75,7 +75,7 @@ public class GasstationTests
     public void AddNewEnergySource_ShouldNotAddDuplicateSource()
     {
         // Arrange
-        var gasstation = new Gasstation(new List<EnergySource> { EnergySource.Gasoline }, 1.5, 1.3, 0.4);
+        var gasstation = new Gasstation(new List<EnergySource> { EnergySource.Gasoline }, 1.5, 1.3, 0.4, new List<MotorizedVehicle>(), 5);
 
         // Act
         bool added = gasstation.AddNewEnergySource(EnergySource.Gasoline);
@@ -88,7 +88,7 @@ public class GasstationTests
     public void RemoveEnergySource_ShouldRemoveSourceIfExists()
     {
         // Arrange
-        var gasstation = new Gasstation(new List<EnergySource> { EnergySource.Gasoline, EnergySource.Diesel }, 1.5, 1.3, 0.4);
+        var gasstation = new Gasstation(new List<EnergySource> { EnergySource.Gasoline, EnergySource.Diesel }, 1.5, 1.3, 0.4, new List<MotorizedVehicle>(), 5);
 
         // Act
         bool removed = gasstation.RemoveEnergySource(EnergySource.Diesel);
@@ -102,7 +102,7 @@ public class GasstationTests
     public void RemoveEnergySource_ShouldNotRemoveIfSourceNotExists()
     {
         // Arrange
-        var gasstation = new Gasstation(new List<EnergySource> { EnergySource.Gasoline }, 1.5, 1.3, 0.4);
+        var gasstation = new Gasstation(new List<EnergySource> { EnergySource.Gasoline }, 1.5, 1.3, 0.4, new List<MotorizedVehicle>(), 5);
 
         // Act
         bool removed = gasstation.RemoveEnergySource(EnergySource.Diesel);
