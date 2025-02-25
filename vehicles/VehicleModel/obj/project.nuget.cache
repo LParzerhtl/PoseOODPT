@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "y0iJjnNPBr0=",
+  "dgSpecHash": "rv9mptpNTpI=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Lenovo\\Documents\\GitHub\\PoseOODPT\\vehicles\\VehicleModel\\VehicleModel.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\loren\\RiderProjects\\PoseOODPT\\vehicles\\VehicleModel\\VehicleModel.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\loren\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.11\\microsoft.netcore.app.ref.8.0.11.nupkg.sha512",
+    "C:\\Users\\loren\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.11\\microsoft.windowsdesktop.app.ref.8.0.11.nupkg.sha512",
+    "C:\\Users\\loren\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.11\\microsoft.aspnetcore.app.ref.8.0.11.nupkg.sha512"
+  ],
   "logs": []
 }

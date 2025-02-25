@@ -2,7 +2,7 @@
 
 public class PassengerVehicles : MotorizedVehicle
 {
-    public PassengerVehicles(string name, string model) : base(name, model)
+    public PassengerVehicles(string name, string model, double currentFuelState, double fuelCapacity, EnergySource source, double averageSpeed, double baseConsumption) : base(name, model, currentFuelState, fuelCapacity, source, averageSpeed, baseConsumption)
     {
     }
     
