@@ -23,14 +23,16 @@ class TransportVehicle
 {
    
     +public override double Drive(double distance, RoadCondition condition)
-    +public double CalculateSpeed(RoadCondition condition))
+    
+    +public bool CheckFuelBeforeDrive(double distance, RoadCondition condition)
 }
 
 class PassengerVehicle
 {
     
+    
     +public override double Drive(double distance, RoadCondition condition)
-    +public double CalculateSpeed(RoadCondition condition))
+    +public bool CheckFuelBeforeDrive(double distance, RoadCondition condition)
 }
 
 abstract MotorizedVehicle
@@ -45,6 +47,7 @@ abstract MotorizedVehicle
     +public bool CheckForRefuel()
     +public MotorizedVehicle(double CurrentFuelState, double fuelCapacity, EnergySource source, double averageSpeed, double baseConsumption)  
     +public double CalculateConsumption(RoadCondition condition)
+    +public double CalculateSpeed(RoadCondition condition))
     
 }
 
@@ -72,6 +75,7 @@ class Gasstation
     +public double Refuel(MotorizedVehicle vehicle)
     +public bool AddNewEnergySource(EnergySource source)
     +public bool RemoveEnergySource(EnergySource source)
+    
 }
 
 enum EnergySource

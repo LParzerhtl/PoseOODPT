@@ -5,31 +5,51 @@ public class TransportVehicle : MotorizedVehicle
     public TransportVehicle(string brand, string model, double currentFuelState, double fuelCapacity, EnergySource source, double averageSpeed, double baseConsumption) : base(brand, model, currentFuelState, fuelCapacity, source, averageSpeed, baseConsumption)
     {
     }
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="distance"></param>
+    /// <param name="condition"></param>
+    /// <returns>Returns time in minutes, if the CheckFuelBeforeDrive is true</returns>
     public override double Drive(double distance, RoadCondition condition)
     {
-        throw new NotImplementedException();
-    }
-    
-    public double CalculateSpeed(RoadCondition condition)
-    {
-        double speed = condition switch
-        {
-            RoadCondition.Highway => 1.2,
-            RoadCondition.City => 0.6,
-            RoadCondition.Offroad => 0.5,
-            _ => 0.9
-        };
-        speed = speed * AverageSpeed;
-        if(condition == RoadCondition.Highway && speed > 80)
-        {
-            speed = 80;
-        } 
-        else if(condition == RoadCondition.City && speed > 50)
+        double speed = CalculateSpeed(condition);
+        double consumption = CalculateConsumption(condition);
+        
+        if (condition == RoadCondition.City && speed > 50)
         {
             speed = 50;
         }
+        else if (condition == RoadCondition.Highway && speed > 130)
+        {
+            speed = 130;
+        }
+
+        double time = 0;
+        if (CheckFuelBeforeDrive(distance, condition))
+        {
+            CurrentFuelState -= (distance / 100 * consumption);
+            time = (distance / speed) * 3.6;
+            TravelledDistance += distance;
+        }
         
+        return time;
+    }
+    
+    
+    
+    
+    public bool CheckFuelBeforeDrive(double distance, RoadCondition condition)
+    {
         
-        return speed;
+        double consumption = CalculateConsumption(condition);
+        double fuelNeeded = distance / 100 * consumption;
+
+        if (CurrentFuelState >= fuelNeeded)
+        {
+            return true;
+        }
+
+        return false;
     }
 }
