@@ -7,40 +7,71 @@ MotorizedVehicle <|-- PassengerVehicle
 Vehicle <|-- Bicycle
 Vehicle <-- RoadCondition
 MotorizedVehicle <-- Gasstation
+MotorizedVehicle <-- EnergySource
 abstract Vehicle
 {
-
+    +public readonly string Brand
+    +public readonly string Model
+    +public double TravelledDistance
+    
+    +public abstract double Drive(double distance, RoadCondition condition);
+    +public Vehicle(string brand, string model)
+    
 }
 
 class TransportVehicle
 {
-
+    -private double CheckMaxSpeed(RoadCondition condition)
+    +public override double Drive(double distance, RoadCondition condition)
 }
 
 class PassengerVehicle
 {
-
+    -private double CheckMaxSpeed(RoadCondition condition)
+    +public override double Drive(double distance, RoadCondition condition)
 }
 
 abstract MotorizedVehicle
 {
-
+    +public readonly double FuelCapacity
+    +public double CurrentFuelState
+    +public double FuelCost
+    +public EnergySource Source
+    
+    +public bool CheckForRefuel()
+    +public MotorizedVehicle(double CurrentFuelState, double fuelCapacity, EnergySource source)  
 }
 
 class Bicycle
 {
-
+    +public override double Drive(double distance, RoadCondition condition)
 }
 
 enum RoadCondition
 {
-
+    CityRoad,
+    Highway,
+    BackRoad,
+    OffRoad
 }
 
 class Gasstation
 {
-
+    +public List<EnergySource> AvailableEnergySources
+    +public double GasolinePrice
+    +public double DieselPrice
+    +public double ElectricityPrice
+    
+    +public Gasstation(List<EnergySource> availableEnergySources, double gasolinePrice, double dieselPrice, double electricityPrice)
+    +public double Refuel(MotorizedVehicle vehicle)
+    +public bool AddNewEnergySource(EnergySource source)
+    +public bool RemoveEnergySource(EnergySource source)
 }
 
-
+enum EnergySource
+{
+    Gasoline,
+    Diesel,
+    Electricity
+}
 @enduml
