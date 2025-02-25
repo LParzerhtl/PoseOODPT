@@ -20,8 +20,25 @@ public abstract class MotorizedVehicle : Vehicle
 
     public bool CheckForRefuel()
     {
-        throw new NotImplementedException();
+        if (CurrentFuelState < FuelCapacity)
+        {
+            return true;
+        }
+        return false;
     }
+
+    public double CalculateConsumption(RoadCondition condition)
+    {
+        double mul = condition switch
+        {
+            RoadCondition.Backroad => 1.1,
+            RoadCondition.Highway => 0.8,
+            RoadCondition.Offroad => 1.5,
+            _ => 1.2
+        };
+        return BaseConsumption * mul;
+    }
+    
 
     
 }

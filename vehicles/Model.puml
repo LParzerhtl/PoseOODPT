@@ -23,12 +23,14 @@ class TransportVehicle
 {
    
     +public override double Drive(double distance, RoadCondition condition)
+    +public double CalculateSpeed(RoadCondition condition))
 }
 
 class PassengerVehicle
 {
     
     +public override double Drive(double distance, RoadCondition condition)
+    +public double CalculateSpeed(RoadCondition condition))
 }
 
 abstract MotorizedVehicle
@@ -42,6 +44,8 @@ abstract MotorizedVehicle
     
     +public bool CheckForRefuel()
     +public MotorizedVehicle(double CurrentFuelState, double fuelCapacity, EnergySource source, double averageSpeed, double baseConsumption)  
+    +public double CalculateConsumption(RoadCondition condition)
+    
 }
 
 class Bicycle
