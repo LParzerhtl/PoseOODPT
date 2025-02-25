@@ -17,8 +17,20 @@ public class PassengerVehicles : MotorizedVehicle
         {
             speed = 50;
         }
-        
-        return 42.4;
+
+        double time = 0;
+        if (CheckFuelBeforeDrive(distance, condition))
+        {
+            CurrentFuelState -= (distance / 100 * CalculateConsumption(condition));
+            time = distance / speed;
+            TravelledDistance += distance;
+        }
+        else
+        {
+            Console.WriteLine("Hat zu wenig Tank!");
+        }
+
+        return time;
     }
 
     

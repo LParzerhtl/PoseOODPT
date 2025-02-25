@@ -2,13 +2,36 @@
 
 public class Bicycle : Vehicle
 {
-    public Bicycle(string brand, string model) : base(brand, model)
+    public Bicycle(string brand, string model, double averageSpeed) : base(brand, model, averageSpeed)
     {
         
     }
     
     public override double Drive(double distance, RoadCondition condition)
     {
-        return distance * 0.1;
+        double speed = condition switch
+        {
+            RoadCondition.Highway => 0,
+            RoadCondition.City => 0.6,
+            RoadCondition.Offroad => 0.5,
+            _ => 0.9
+        };
+        
+        speed = AverageSpeed * speed;
+        double time = 0;
+        
+        if (condition == RoadCondition.Highway)
+        {
+            Console.WriteLine("Fahräder dürfen nicht auf der Autobahn fahren!");
+        }
+        else
+        {
+            time = distance / speed;
+        }
+        TravelledDistance += time * speed;
+        return time;
+        
     }
+    
+    
 }

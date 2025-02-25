@@ -10,7 +10,7 @@ public class TransportVehicle : MotorizedVehicle
     /// </summary>
     /// <param name="distance"></param>
     /// <param name="condition"></param>
-    /// <returns>Returns time in minutes, if the CheckFuelBeforeDrive is true</returns>
+    /// <returns>Returns time in hours, if the CheckFuelBeforeDrive is true</returns>
     public override double Drive(double distance, RoadCondition condition)
     {
         double speed = CalculateSpeed(condition);
@@ -29,8 +29,12 @@ public class TransportVehicle : MotorizedVehicle
         if (CheckFuelBeforeDrive(distance, condition))
         {
             CurrentFuelState -= (distance / 100 * consumption);
-            time = (distance / speed) * 3.6;
+            time = (distance / speed);
             TravelledDistance += distance;
+        }
+        else
+        {
+            Console.WriteLine("Hat zu wenig Tank!");
         }
         
         return time;
@@ -39,17 +43,5 @@ public class TransportVehicle : MotorizedVehicle
     
     
     
-    public bool CheckFuelBeforeDrive(double distance, RoadCondition condition)
-    {
-        
-        double consumption = CalculateConsumption(condition);
-        double fuelNeeded = distance / 100 * consumption;
-
-        if (CurrentFuelState >= fuelNeeded)
-        {
-            return true;
-        }
-
-        return false;
-    }
+    
 }

@@ -3,16 +3,16 @@ namespace VehicleModel;
 public abstract class MotorizedVehicle : Vehicle
 {
     public double FuelCapacity { get; }
-    public double AverageSpeed { get; }
+    
     public double BaseConsumption { get; }
     public double CurrentFuelState { get; set; }
     public double FuelCost { get; set; }
     public EnergySource Source { get; set; }
     
-    public MotorizedVehicle(string name, string model, double currentFuelState, double fuelCapacity, EnergySource source, double averageSpeed, double baseConsumption): base(name, model)
+    public MotorizedVehicle(string name, string model, double currentFuelState, double fuelCapacity, EnergySource source, double averageSpeed, double baseConsumption): base(name, model, averageSpeed)
     {
         FuelCapacity = fuelCapacity;
-        AverageSpeed = averageSpeed;
+       
         BaseConsumption = baseConsumption;
         CurrentFuelState = currentFuelState;
         Source = source;
@@ -55,6 +55,29 @@ public abstract class MotorizedVehicle : Vehicle
         return speed;
     }
     
+    public bool CheckFuelBeforeDrive(double distance, RoadCondition condition)
+    {
+        
+        double consumption = CalculateConsumption(condition);
+        double fuelNeeded = distance / 100 * consumption;
 
+        if (CurrentFuelState >= fuelNeeded)
+        {
+            return true;
+        }
+
+        return false;
+    }
+
+    public void PrintData()
+    {
+        Console.WriteLine($"Marke: {Brand}");
+        Console.WriteLine($"Modell: {Model}");
+        Console.WriteLine($"Derzeitiger Füllstand: {CurrentFuelState}");
+        Console.WriteLine($"Maximaler Füllstand: {FuelCapacity}");
+        Console.WriteLine($"Durchschnitliche Geschwindigkeit: {AverageSpeed}");
+        Console.WriteLine($"Durchschnittlicher Verbrauch: {BaseConsumption}");
+        Console.WriteLine($"Energiequelle: {Source}");
+    }
     
 }
