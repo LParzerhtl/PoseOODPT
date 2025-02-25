@@ -68,5 +68,16 @@ public abstract class MotorizedVehicle : Vehicle
 
         return false;
     }
+
+    public void PrintData()
+    {
+        Console.WriteLine($"Marke: {Brand}");
+        Console.WriteLine($"Modell: {Model}");
+        Console.WriteLine($"Derzeitiger Füllstand: {CurrentFuelState}");
+        Console.WriteLine($"Maximaler Füllstand: {FuelCapacity}");
+        Console.WriteLine($"Durchschnitliche Geschwindigkeit: {AverageSpeed}");
+        Console.WriteLine($"Durchschnittlicher Verbrauch: {BaseConsumption}");
+        Console.WriteLine($"Energiequelle: {Source}");
+    }
     
 }

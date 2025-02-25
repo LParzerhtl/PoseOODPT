@@ -49,6 +49,7 @@ abstract MotorizedVehicle
     +public double CalculateConsumption(RoadCondition condition)
     +public double CalculateSpeed(RoadCondition condition))
     +public bool CheckFuelBeforeDrive(double distance, RoadCondition condition)
+    +public void PrintData()
     
 }
 
@@ -76,6 +77,8 @@ class Gasstation
     +public double Refuel(MotorizedVehicle vehicle)
     +public bool AddNewEnergySource(EnergySource source)
     +public bool RemoveEnergySource(EnergySource source)
+    +public bool AddVehicle(MotorizedVehicle vehicle)
+    +public bool RemoveVehicle(MotorizedVehicle vehicle)
     
 }
 

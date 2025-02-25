@@ -16,10 +16,21 @@ public class Bicycle : Vehicle
             RoadCondition.Offroad => 0.5,
             _ => 0.9
         };
+        
         speed = AverageSpeed * speed;
-        double time = distance / speed;
+        double time = 0;
+        
+        if (condition == RoadCondition.Highway)
+        {
+            Console.WriteLine("Fahräder dürfen nicht auf der Autobahn fahren!");
+        }
+        else
+        {
+            time = distance / speed;
+        }
         TravelledDistance += time * speed;
         return time;
+        
     }
     
     
