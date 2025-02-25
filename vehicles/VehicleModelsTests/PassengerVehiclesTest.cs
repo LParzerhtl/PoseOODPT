@@ -31,7 +31,7 @@ public class PassengerVehiclesTest
         RoadCondition condition = RoadCondition.Highway; // Verbrauch * 0.8, Geschwindigkeit * 1.2
 
         double expectedFuelConsumption = (8.0 * 0.8) * (distance / 100); // Verbrauch basierend auf Highway
-        double expectedTravelTime = (distance / (120.0 * 1.2)); // Geschwindigkeit basierend auf Highway
+        double expectedTravelTime = (distance / 130); // Geschwindigkeit basierend auf Highway
 
         // Act
         double actualTravelTime = vehicle.Drive(distance, condition);

@@ -55,6 +55,18 @@ public abstract class MotorizedVehicle : Vehicle
         return speed;
     }
     
+    public bool CheckFuelBeforeDrive(double distance, RoadCondition condition)
+    {
+        
+        double consumption = CalculateConsumption(condition);
+        double fuelNeeded = distance / 100 * consumption;
 
+        if (CurrentFuelState >= fuelNeeded)
+        {
+            return true;
+        }
+
+        return false;
+    }
     
 }
