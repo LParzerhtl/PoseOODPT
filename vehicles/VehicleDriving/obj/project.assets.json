@@ -13,13 +13,12 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\loren\\OneDrive\\Dokumente\\HTL\\POSE\\2. Jahrgang C#\\vehicles\\VehicleDriving\\VehicleDriving.csproj",
+      "projectUniqueName": "C:\\Users\\loren\\OneDrive\\Dokumente\\GitHub\\PoseOODPT\\vehicles\\VehicleDriving\\VehicleDriving.csproj",
       "projectName": "VehicleDriving",
-      "projectPath": "C:\\Users\\loren\\OneDrive\\Dokumente\\HTL\\POSE\\2. Jahrgang C#\\vehicles\\VehicleDriving\\VehicleDriving.csproj",
+      "projectPath": "C:\\Users\\loren\\OneDrive\\Dokumente\\GitHub\\PoseOODPT\\vehicles\\VehicleDriving\\VehicleDriving.csproj",
       "packagesPath": "C:\\Users\\loren\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\loren\\OneDrive\\Dokumente\\HTL\\POSE\\2. Jahrgang C#\\vehicles\\VehicleDriving\\obj\\",
+      "outputPath": "C:\\Users\\loren\\OneDrive\\Dokumente\\GitHub\\PoseOODPT\\vehicles\\VehicleDriving\\obj\\",
       "projectStyle": "PackageReference",
-      "UsingMicrosoftNETSdk": false,
       "configFilePaths": [
         "C:\\Users\\loren\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -29,6 +28,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -45,7 +45,7 @@
       "restoreAuditProperties": {
         "enableAudit": "true",
         "auditLevel": "low",
-        "auditMode": "all"
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -62,30 +62,12 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[8.0.11, 8.0.11]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[8.0.11, 8.0.11]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[8.0.11, 8.0.11]"
-          },
-          {
-            "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[8.0.11, 8.0.11]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Users\\loren\\.dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
