@@ -21,25 +21,27 @@ abstract Vehicle
 
 class TransportVehicle
 {
-    -private double CheckMaxSpeed(RoadCondition condition)
+   
     +public override double Drive(double distance, RoadCondition condition)
 }
 
 class PassengerVehicle
 {
-    -private double CheckMaxSpeed(RoadCondition condition)
+    
     +public override double Drive(double distance, RoadCondition condition)
 }
 
 abstract MotorizedVehicle
 {
     +public readonly double FuelCapacity
+    +public readonly double AverageSpeed
+    +public readonly double BaseConsumption
     +public double CurrentFuelState
     +public double FuelCost
     +public EnergySource Source
     
     +public bool CheckForRefuel()
-    +public MotorizedVehicle(double CurrentFuelState, double fuelCapacity, EnergySource source)  
+    +public MotorizedVehicle(double CurrentFuelState, double fuelCapacity, EnergySource source, double averageSpeed, double baseConsumption)  
 }
 
 class Bicycle
