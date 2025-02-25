@@ -2,18 +2,11 @@
 
 public class PassengerVehicles : MotorizedVehicle
 {
-    public string Make { get; set; }
-    public string Model { get; set; }
-    public int Year { get; set; }
-
-    public PassengerVehicles(string name, string model, int year)
+    public PassengerVehicles(string name, string model, int year) : base(name, model, year)
     {
-        Make = name;
-        Model = model;
-        Year = year;
     }
     
-    public double Drive(double distance, DrivingCondition condition)
+    public override double Drive(double distance, DrivingCondition condition)
     {
         return 42.4;
     }
