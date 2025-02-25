@@ -59,6 +59,6 @@ public class TransportVehicleTest
 
         // Assert
         Assert.Equal(5.0, vehicle.CurrentFuelState); // Kein Kraftstoffverbrauch
-        Assert.Equal(0.0, travelTime); // Keine Bewegung möglich
+        Assert.Equal(0.0, travelTime); 
     }
 }
