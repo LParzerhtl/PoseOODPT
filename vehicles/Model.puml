@@ -5,14 +5,15 @@ Vehicle <|-- MotorizedVehicle
 MotorizedVehicle <|-- TransportVehicle
 MotorizedVehicle <|-- PassengerVehicle
 Vehicle <|-- Bicycle
-Vehicle <-- RoadCondition
-MotorizedVehicle <-- Gasstation
-MotorizedVehicle <-- EnergySource
+Vehicle --> RoadCondition
+MotorizedVehicle --> Gasstation
+MotorizedVehicle --> EnergySource
 abstract Vehicle
 {
     +public readonly string Brand
     +public readonly string Model
     +public double TravelledDistance
+    +public readonly double AverageSpeed
     
     +public abstract double Drive(double distance, RoadCondition condition);
     +public Vehicle(string brand, string model)
@@ -24,7 +25,7 @@ class TransportVehicle
    
     +public override double Drive(double distance, RoadCondition condition)
     
-    +public bool CheckFuelBeforeDrive(double distance, RoadCondition condition)
+    
 }
 
 class PassengerVehicle
@@ -32,13 +33,12 @@ class PassengerVehicle
     
     
     +public override double Drive(double distance, RoadCondition condition)
-    +public bool CheckFuelBeforeDrive(double distance, RoadCondition condition)
+    
 }
 
 abstract MotorizedVehicle
 {
     +public readonly double FuelCapacity
-    +public readonly double AverageSpeed
     +public readonly double BaseConsumption
     +public double CurrentFuelState
     +public double FuelCost
@@ -48,6 +48,7 @@ abstract MotorizedVehicle
     +public MotorizedVehicle(double CurrentFuelState, double fuelCapacity, EnergySource source, double averageSpeed, double baseConsumption)  
     +public double CalculateConsumption(RoadCondition condition)
     +public double CalculateSpeed(RoadCondition condition))
+    +public bool CheckFuelBeforeDrive(double distance, RoadCondition condition)
     
 }
 

@@ -32,6 +32,10 @@ public class TransportVehicle : MotorizedVehicle
             time = (distance / speed);
             TravelledDistance += distance;
         }
+        else
+        {
+            Console.WriteLine("Hat zu wenig Tank!");
+        }
         
         return time;
     }
