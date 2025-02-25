@@ -2,11 +2,11 @@
 
 public class PassengerVehicles : MotorizedVehicle
 {
-    public PassengerVehicles(string name, string model, int year) : base(name, model, year)
+    public PassengerVehicles(string name, string model) : base(name, model)
     {
     }
     
-    public override double Drive(double distance, DrivingCondition condition)
+    public override double Drive(double distance, RoadCondition condition)
     {
         return 42.4;
     }

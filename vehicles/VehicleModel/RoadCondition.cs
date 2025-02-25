@@ -1,6 +1,6 @@
 namespace VehicleModel;
 
-public enum DrivingCondition
+public enum RoadCondition
 {
     Offroad,
     Backroad,

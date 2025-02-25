@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "/ZcWQNQTWc0=",
+  "dgSpecHash": "X1wqCnUNks0=",
   "success": true,
   "projectFilePath": "C:\\Users\\loren\\RiderProjects\\PoseOODPT\\vehicles\\VehicleModelsTests\\VehicleModelsTests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\loren\\.nuget\\packages\\coverlet.collector\\6.0.0\\coverlet.collector.6.0.0.nupkg.sha512",
+    "C:\\Users\\loren\\.nuget\\packages\\jetbrains.annotations\\2025.1.0-eap1\\jetbrains.annotations.2025.1.0-eap1.nupkg.sha512",
     "C:\\Users\\loren\\.nuget\\packages\\microsoft.codecoverage\\17.8.0\\microsoft.codecoverage.17.8.0.nupkg.sha512",
     "C:\\Users\\loren\\.nuget\\packages\\microsoft.net.test.sdk\\17.8.0\\microsoft.net.test.sdk.17.8.0.nupkg.sha512",
     "C:\\Users\\loren\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
