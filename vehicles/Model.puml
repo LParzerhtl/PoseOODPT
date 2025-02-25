@@ -1,0 +1,46 @@
+﻿@startuml
+'https://plantuml.com/sequence-diagram
+
+Vehicle <|-- MotorizedVehicle
+MotorizedVehicle <|-- TransportVehicle
+MotorizedVehicle <|-- PassengerVehicle
+Vehicle <|-- Bicycle
+Vehicle <-- RoadCondition
+MotorizedVehicle <-- Gasstation
+abstract Vehicle
+{
+
+}
+
+class TransportVehicle
+{
+
+}
+
+class PassengerVehicle
+{
+
+}
+
+abstract MotorizedVehicle
+{
+
+}
+
+class Bicycle
+{
+
+}
+
+enum RoadCondition
+{
+
+}
+
+class Gasstation
+{
+
+}
+
+
+@enduml
