@@ -161,12 +161,54 @@ namespace VehicleDriving
             Console.WriteLine($"Total distance travelled: {transportTruck.TravelledDistance:F2} km.");
             Console.WriteLine();
 
+              Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine("\n=== Leg 5: Return Electric Car to Rental Shop ===");
+            Console.ResetColor();
+            Console.WriteLine("Electric Car Info:");
+            Console.WriteLine($"- Brand: {electricCar.Brand}, Model: {electricCar.Model}");
+            Console.WriteLine($"- Average Speed: {electricCar.AverageSpeed} km/h");
+            Console.WriteLine($"- Fuel Capacity: {electricCar.FuelCapacity} kWh {electricCar.Source}");
+            Console.WriteLine($"- Current Fuel Level: {electricCar.CurrentFuelState} kWh {electricCar.Source}");
+            Console.WriteLine($"- Base Consumption: {electricCar.BaseConsumption} kWh/100km");
+            Console.WriteLine($"- Total Distance Travelled: {electricCar.TravelledDistance} km");
+
+            initialFuelElectricCar = electricCar.CurrentFuelState;
+            double electricCarTime4 = electricCar.Drive(5, RoadCondition.City);
+            double electricCarFuel4 = initialFuelElectricCar - electricCar.CurrentFuelState;
+            Console.WriteLine($"Electric Car: Travelled 5 km in the city in {electricCarTime4:F2} hours and consumed {electricCarFuel4:F2} kWh {electricCar.Source}.");
+            Console.WriteLine($"Current fuel state: {electricCar.CurrentFuelState:F2} kWh {electricCar.Source}.");
+            Console.WriteLine($"Total distance travelled: {electricCar.TravelledDistance:F2} km.");
+            Console.WriteLine();
+
+           
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine("=== Refueling Electric Car Before Return ===");
+            Console.ResetColor();
+            refuelCost = gasStation.Refuel(electricCar);
+            Console.WriteLine($"Refueled electric car. Cost: {refuelCost:F2} euros.");
+            Console.WriteLine($"Current fuel state: {electricCar.CurrentFuelState:F2} kWh {electricCar.Source}.");
+            Console.WriteLine();
+
+            
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.WriteLine("\n=== Leg 6: Bicycle Ride After Returning Electric Car ===");
+            Console.ResetColor();
+            Console.WriteLine("Bicycle Info:");
+            Console.WriteLine($"- Brand: {bicycle.Brand}, Model: {bicycle.Model}");
+            Console.WriteLine($"- Average Speed: {bicycle.AverageSpeed} km/h");
+            Console.WriteLine($"- Total Distance Travelled: {bicycle.TravelledDistance} km");
+            double bicycleTime2 = bicycle.Drive(2, RoadCondition.City);
+            Console.WriteLine($"Bicycle: Travelled 2 km in {bicycleTime2:F2} hours.");
+            Console.WriteLine($"Total distance travelled: {bicycle.TravelledDistance:F2} km.");
+            Console.WriteLine();
+
             
             Console.ForegroundColor = ConsoleColor.Cyan;
             Console.WriteLine("=== Journey Summary ===");
             Console.ResetColor();
-            Console.WriteLine($"Total time: {bicycleTime + electricCarTime1 + electricCarTime2 + electricCarTime3 + offroadTime1 + offroadTime2 + offroadTime3 + offroadTime4 + truckTime:F2} hours.");
+            Console.WriteLine($"Total time: {bicycleTime + electricCarTime1 + electricCarTime2 + electricCarTime3 + offroadTime1 + offroadTime2 + offroadTime3 + offroadTime4 + truckTime + electricCarTime4 + bicycleTime2:F2} hours.");
             Console.WriteLine($"Total fuel cost: {electricCar.FuelCost + offroadVehicle.FuelCost + transportTruck.FuelCost:F2} euros.");
+            Console.WriteLine($"Total distance travelled: {bicycle.TravelledDistance + electricCar.TravelledDistance + offroadVehicle.TravelledDistance + transportTruck.TravelledDistance:F2} km.");
             Console.ReadKey();
         }
     }
