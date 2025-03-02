@@ -209,7 +209,6 @@ namespace VehicleDriving
             Console.WriteLine($"Total time: {bicycleTime + electricCarTime1 + electricCarTime2 + electricCarTime3 + offroadTime1 + offroadTime2 + offroadTime3 + offroadTime4 + truckTime + electricCarTime4 + bicycleTime2:F2} hours.");
             Console.WriteLine($"Total fuel cost: {electricCar.FuelCost + offroadVehicle.FuelCost + transportTruck.FuelCost:F2} euros.");
             Console.WriteLine($"Total distance travelled: {bicycle.TravelledDistance + electricCar.TravelledDistance + offroadVehicle.TravelledDistance + transportTruck.TravelledDistance:F2} km.");
-            Console.ReadKey();
         }
     }
 }

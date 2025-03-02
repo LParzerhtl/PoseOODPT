@@ -10,3 +10,15 @@ C:\Users\Lenovo\Documents\GitHub\PoseOODPT\vehicles\VehicleModel\obj\Debug\net8.
 C:\Users\Lenovo\Documents\GitHub\PoseOODPT\vehicles\VehicleModel\obj\Debug\net8.0\refint\VehicleModel.dll
 C:\Users\Lenovo\Documents\GitHub\PoseOODPT\vehicles\VehicleModel\obj\Debug\net8.0\VehicleModel.pdb
 C:\Users\Lenovo\Documents\GitHub\PoseOODPT\vehicles\VehicleModel\obj\Debug\net8.0\ref\VehicleModel.dll
+C:\Users\loren\RiderProjects\PoseOODPT\vehicles\VehicleModel\bin\Debug\net8.0\VehicleModel.deps.json
+C:\Users\loren\RiderProjects\PoseOODPT\vehicles\VehicleModel\bin\Debug\net8.0\VehicleModel.dll
+C:\Users\loren\RiderProjects\PoseOODPT\vehicles\VehicleModel\bin\Debug\net8.0\VehicleModel.pdb
+C:\Users\loren\RiderProjects\PoseOODPT\vehicles\VehicleModel\obj\Debug\net8.0\VehicleModel.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\loren\RiderProjects\PoseOODPT\vehicles\VehicleModel\obj\Debug\net8.0\VehicleModel.AssemblyInfoInputs.cache
+C:\Users\loren\RiderProjects\PoseOODPT\vehicles\VehicleModel\obj\Debug\net8.0\VehicleModel.AssemblyInfo.cs
+C:\Users\loren\RiderProjects\PoseOODPT\vehicles\VehicleModel\obj\Debug\net8.0\VehicleModel.csproj.CoreCompileInputs.cache
+C:\Users\loren\RiderProjects\PoseOODPT\vehicles\VehicleModel\obj\Debug\net8.0\VehicleModel.sourcelink.json
+C:\Users\loren\RiderProjects\PoseOODPT\vehicles\VehicleModel\obj\Debug\net8.0\VehicleModel.dll
+C:\Users\loren\RiderProjects\PoseOODPT\vehicles\VehicleModel\obj\Debug\net8.0\refint\VehicleModel.dll
+C:\Users\loren\RiderProjects\PoseOODPT\vehicles\VehicleModel\obj\Debug\net8.0\VehicleModel.pdb
+C:\Users\loren\RiderProjects\PoseOODPT\vehicles\VehicleModel\obj\Debug\net8.0\ref\VehicleModel.dll
